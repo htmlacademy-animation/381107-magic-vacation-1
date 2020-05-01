@@ -241,7 +241,9 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
-    transition: color 0.3s ease;
+    transition-property: color;
+    transition-duration: 0.35s;
+    transition-timing-function: ease;
 
     &::after {
       content: "";
@@ -254,7 +256,9 @@
       left: 0;
       transform: scaleX(0);
       transform-origin: right;
-      transition: transform 0.3s ease;
+      transition-property: transform;
+      transition-duration: 0.35s;
+      transition-timing-function: ease;
 
       @media (min-width: $stop-scaling) {
         left: -5px;
@@ -279,12 +283,11 @@
         display: block;
         transform: scaleX(1);
         transform-origin: left;
-        transition: all 0.3s ease;
       }
     }
 
-    &:hover,
-    &:focus {
+    &:not(.active):hover,
+    &:not(.active):focus {
       color: $c-purple;
       outline: none;
 
