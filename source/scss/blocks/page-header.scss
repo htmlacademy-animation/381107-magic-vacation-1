@@ -35,6 +35,16 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition-property: all;
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(0.28, -0.01, 0, 0.97);
+
+  .body-ready & {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -130,6 +140,14 @@
 .page-header__nav {
   display: flex;
   align-items: center;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 1.2s;
+  transition-timing-function: cubic-bezier(0.28, -0.01, 0, 0.97);
+
+  .body-ready & {
+    opacity: 1;
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
@@ -280,7 +298,15 @@
 
     &.active {
       &::after {
-        display: block;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition-timing-function: ease;
+        transition-delay: 0.7s;
+      }
+    }
+
+    .body-ready &.active {
+      &::after {
         transform: scaleX(1);
         transform-origin: left;
       }

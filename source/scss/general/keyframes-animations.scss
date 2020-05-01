@@ -19,12 +19,3 @@
     transform: translateX(0);
   }
 }
-
-@keyframes expandLeft {
-  0% {
-    width: 6rem;
-  }
-  100% {
-    width: calc(100% - 21rem);
-  }
-}
