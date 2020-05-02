@@ -19,7 +19,7 @@ export default () => {
     menuLinks[i].addEventListener(`click`, function () {
       if (window.innerWidth < 1025) {
         header.classList.remove(`page-header--menu-opened`);
-        document.body.classList.remove(`menu-opened`);gi
+        document.body.classList.remove(`menu-opened`);
       }
     });
   }
