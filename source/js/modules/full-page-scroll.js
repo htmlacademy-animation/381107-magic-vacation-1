@@ -26,6 +26,14 @@ export default class FullPageScroll {
     if (currentPosition !== this.activeScreen) {
       this.changePageDisplay();
     }
+    if (this.screenElements[this.activeScreen].classList.contains(`screen--prizes`) && evt.deltaY > 0) {
+      document.querySelector(`.screen--story`).classList.add(`screen--delayed`);
+      document.querySelector(`.screen--prizes`).classList.add(`from-top`);
+      setTimeout(() => {
+        document.querySelector(`.screen--story`).classList.remove(`screen--delayed`);
+        document.querySelector(`.screen--prizes`).classList.remove(`from-top`);
+      }, 2000);
+    }
   }
 
   onUrlHashChenged() {
