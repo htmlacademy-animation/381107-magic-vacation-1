@@ -60,6 +60,7 @@
     width: calc(100% - 210px);
     font-size: 24px;
     border-radius: 30px;
+    animation-name: expandLeftStopScaling;
   }
 
   @media (orientation: portrait) {
@@ -68,10 +69,12 @@
     width: calc(100% - 5rem);
     height: 4rem;
     font-size: 1.6rem;
+    animation-name: expandLeftPortrait;
   }
 
   @media (max-width: $tablet) and (orientation: landscape) {
     width: calc(100% - 9rem);
+    animation-name: expandLeftTabletLandscape;
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
@@ -80,6 +83,7 @@
     width: calc(100% - 5rem);
     height: 4rem;
     font-size: 1.6rem;
+    animation-name: expandLeftPortrait;
   }
 }
 
@@ -90,7 +94,7 @@
     position: relative;
     flex: none;
     padding: 0;
-    width: 4rem;
+    min-width: 4rem;
     height: 4rem;
     font-size: 0;
   }
@@ -99,13 +103,13 @@
     position: relative;
     flex: none;
     padding: 0;
-    width: 6rem;
+    min-width: 6rem;
     height: 6rem;
     font-size: 0;
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
-    width: 4rem;
+    min-width: 4rem;
     height: 4rem;
   }
 
@@ -160,5 +164,32 @@
   }
   100% {
     width: calc(100% - 21rem);
+  }
+}
+
+@keyframes expandLeftStopScaling {
+  0% {
+    width: 6rem;
+  }
+  100% {
+    width: calc(100% - 210px);
+  }
+}
+
+@keyframes expandLeftPortrait {
+  0% {
+    width: 6rem;
+  }
+  100% {
+    width: calc(100% - 5rem);
+  }
+}
+
+@keyframes expandLeftTabletLandscape {
+  0% {
+    width: 6rem;
+  }
+  100% {
+    width: calc(100% - 9rem);
   }
 }
