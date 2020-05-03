@@ -938,15 +938,9 @@ img {
 
 @keyframes slideUp {
   0% {
-    height: 0; }
+    transform: translateY(100%); }
   100% {
-    height: 100%; } }
-
-@keyframes expandLeft {
-  0% {
-    width: 6rem; }
-  100% {
-    width: calc(100% - 21rem); } }
+    transform: translateY(0); } }
 
 .animation-screen {
   position: fixed;
@@ -1314,24 +1308,28 @@ img {
       height: 60px;
       width: calc(100% - 210px);
       font-size: 24px;
-      border-radius: 30px; } }
+      border-radius: 30px;
+      animation-name: expandLeftStopScaling; } }
   @media (orientation: portrait) {
     .form__field {
       margin-right: 1rem;
       padding: 0 2.5rem;
       width: calc(100% - 5rem);
       height: 4rem;
-      font-size: 1.6rem; } }
+      font-size: 1.6rem;
+      animation-name: expandLeftPortrait; } }
   @media (max-width: 1024px) and (orientation: landscape) {
     .form__field {
-      width: calc(100% - 9rem); } }
+      width: calc(100% - 9rem);
+      animation-name: expandLeftTabletLandscape; } }
   @media (max-width: 768px) and (orientation: landscape) {
     .form__field {
       margin-right: 1rem;
       padding: 0 2.5rem;
       width: calc(100% - 5rem);
       height: 4rem;
-      font-size: 1.6rem; } }
+      font-size: 1.6rem;
+      animation-name: expandLeftPortrait; } }
 
 .form__button {
   min-width: 21rem; }
@@ -1340,7 +1338,7 @@ img {
       position: relative;
       flex: none;
       padding: 0;
-      width: 4rem;
+      min-width: 4rem;
       height: 4rem;
       font-size: 0; } }
   @media (max-width: 1024px) and (orientation: landscape) {
@@ -1348,12 +1346,12 @@ img {
       position: relative;
       flex: none;
       padding: 0;
-      width: 6rem;
+      min-width: 6rem;
       height: 6rem;
       font-size: 0; } }
   @media (max-width: 768px) and (orientation: landscape) {
     .form__button {
-      width: 4rem;
+      min-width: 4rem;
       height: 4rem; } }
   .form__button svg {
     position: absolute;
@@ -1394,6 +1392,24 @@ img {
     width: 6rem; }
   100% {
     width: calc(100% - 21rem); } }
+
+@keyframes expandLeftStopScaling {
+  0% {
+    width: 6rem; }
+  100% {
+    width: calc(100% - 210px); } }
+
+@keyframes expandLeftPortrait {
+  0% {
+    width: 6rem; }
+  100% {
+    width: calc(100% - 5rem); } }
+
+@keyframes expandLeftTabletLandscape {
+  0% {
+    width: 6rem; }
+  100% {
+    width: calc(100% - 9rem); } }
 
 .game {
   flex-grow: 1;
@@ -2858,21 +2874,16 @@ img {
     .screen--story {
       background-size: auto calc(100vh - 13.8rem), 100% 25rem;
       background-position: top center, bottom center; } }
-  .screen--hidden + .screen--story.screen--hidden {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%; }
 
 .screen--prizes::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 0;
-  background-color: #5f458c; }
+  height: 100%;
+  background-color: #5f458c;
+  transform: translateY(100%); }
 
 .screen--prizes.active::before {
   animation-name: slideUp;
