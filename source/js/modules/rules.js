@@ -5,7 +5,6 @@ export default () => {
   let rulesLink = document.querySelector(`.rules__link`);
   let timeoutValue = 0;
 
-  // add --visible classes with animation to all rules items
   rulesLead.addEventListener(`animationend`, () => {
     for (let i = 0; i < rules.length; i++) {
       timeoutValue = 300 * i;
@@ -15,7 +14,6 @@ export default () => {
     }
   });
 
-  // add --visible class with animation to a button
   lastRulesItem.addEventListener(`animationend`, () => {
     rulesLink.classList.add(`rules__link--visible`);
   });

@@ -46,7 +46,9 @@ export default class FullPageScroll {
     this.changeVisibilityDisplay();
     this.changeActiveMenuItem();
     this.emitChangeDisplayEvent();
-    this.clearRulesVisibility();
+    if (document.querySelector(`.rules__item--visible`) || document.querySelector(`.rules__link--visible`)) {
+      this.clearRulesVisibility();
+    }
   }
 
   changeVisibilityDisplay() {
