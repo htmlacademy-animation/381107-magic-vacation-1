@@ -1,7 +1,7 @@
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -12,7 +12,7 @@
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(25px);
+    transform: translateX(3rem);
   }
   100% {
     opacity: 1;
@@ -26,5 +26,14 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

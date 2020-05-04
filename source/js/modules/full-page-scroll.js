@@ -26,6 +26,14 @@ export default class FullPageScroll {
     if (currentPosition !== this.activeScreen) {
       this.changePageDisplay();
     }
+    if (this.screenElements[this.activeScreen].classList.contains(`screen--prizes`) && evt.deltaY > 0) {
+      document.querySelector(`.screen--story`).classList.add(`screen--delayed`);
+      document.querySelector(`.screen--prizes`).classList.add(`from-top`);
+      setTimeout(() => {
+        document.querySelector(`.screen--story`).classList.remove(`screen--delayed`);
+        document.querySelector(`.screen--prizes`).classList.remove(`from-top`);
+      }, 2000);
+    }
   }
 
   onUrlHashChenged() {
@@ -38,6 +46,7 @@ export default class FullPageScroll {
     this.changeVisibilityDisplay();
     this.changeActiveMenuItem();
     this.emitChangeDisplayEvent();
+    this.clearRulesVisibility();
   }
 
   changeVisibilityDisplay() {
@@ -75,5 +84,13 @@ export default class FullPageScroll {
     } else {
       this.activeScreen = Math.max(0, --this.activeScreen);
     }
+  }
+
+  // clear --visible classes for rules items and a button
+  clearRulesVisibility() {
+    document.querySelectorAll(`.rules__item--visible`).forEach((item) => {
+      item.classList.remove(`rules__item--visible`);
+    });
+    document.querySelector(`.rules__link--visible`).classList.remove(`rules__link--visible`);
   }
 }

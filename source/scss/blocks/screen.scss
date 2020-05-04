@@ -10,6 +10,15 @@
     display: none;
   }
 
+  &--delayed {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     min-height: calc(var(--vh, 1vh) * 100);
   }
@@ -312,6 +321,12 @@
 }
 
 .screen--prizes {
+  background-color: $c-dark;
+
+  &.from-top {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -324,6 +339,13 @@
   }
 
   &.active::before {
+    animation-name: slideUp;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0, 1.04);
+    animation-fill-mode: forwards;
+  }
+
+  &.from-top::before {
     animation-name: slideUp;
     animation-duration: 0.8s;
     animation-timing-function: cubic-bezier(0.25, 0.1, 0, 1.04);
