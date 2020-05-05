@@ -10,6 +10,7 @@ import social from './modules/social.js';
 import body from './modules/body.js';
 import rules from './modules/rules.js';
 import FullPageScroll from './modules/full-page-scroll';
+import CharactersAnimation from './modules/animated-letters';
 
 // init modules
 mobileHeight();
