@@ -46,12 +46,15 @@ export default class FullPageScroll {
     this.changeVisibilityDisplay();
     this.changeActiveMenuItem();
     this.emitChangeDisplayEvent();
-    // if (document.querySelector(`.rules__item--visible`) || document.querySelector(`.rules__link--visible`)) {
-    //   this.clearRulesVisibility();
-    // }
-    if (document.querySelector(`.rules__item--visible`)) { this.clearCSSClasses(`rules__item--visible`) }
-    if (document.querySelector(`.rules__link--visible`)) { this.clearCSSClasses(`rules__link--visible`) }
-    if (document.querySelector(`.intro__title--animated`)) { this.clearCSSClasses(`intro__title--animated`) }
+    if (document.querySelector(`.rules__item--visible`)) {
+      this.clearCSSClasses(`rules__item--visible`);
+    }
+    if (document.querySelector(`.rules__link--visible`)) {
+      this.clearCSSClasses(`rules__link--visible`);
+    }
+    if (document.querySelector(`.intro__title--animated`)) {
+      this.clearCSSClasses(`intro__title--animated`);
+    }
   }
 
   changeVisibilityDisplay() {

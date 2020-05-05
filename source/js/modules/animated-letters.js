@@ -1,11 +1,11 @@
 export default class CharactersAnimation {
   constructor(
-    elementSelector,
-    classNameForWord,
-    duration,
-    timingFunction,
-    initialDelay,
-    delayCoefficient
+      elementSelector,
+      classNameForWord,
+      duration,
+      timingFunction,
+      initialDelay,
+      delayCoefficient
   ) {
     this._elementSelector = elementSelector;
     this._classNameForWord = classNameForWord;
@@ -14,8 +14,6 @@ export default class CharactersAnimation {
     this._element = document.querySelector(this._elementSelector);
     this._initialDelay = initialDelay;
     this._delayCoefficient = delayCoefficient;
-
-    this.prepareText();
   }
 
   createElement(letter) {
@@ -34,7 +32,7 @@ export default class CharactersAnimation {
       return;
     }
 
-    const text = this._element.textContent.trim().split(` `).filter((latter)=>latter !== '');
+    const text = this._element.textContent.trim().split(` `).filter((latter) => latter !== ``);
 
     const content = text.reduce((fragmentParent, word) => {
       const wordElement = Array.from(word).reduce((fragment, latter) => {
@@ -52,6 +50,3 @@ export default class CharactersAnimation {
     this._element.appendChild(content);
   }
 }
-
-const animatedIntroTitle = new CharactersAnimation(`.intro__title`, `intro__word`, 800, `cubic-bezier(0.16, 0, 0.26, 0.96)`, 0, 25);
-const animatedIntroDate = new CharactersAnimation(`.intro__date`, `intro__date-piece`, 600, `cubic-bezier(0.16, 0, 0.26, 0.96)`, 800, 25);
