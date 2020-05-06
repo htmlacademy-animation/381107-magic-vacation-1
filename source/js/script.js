@@ -27,5 +27,5 @@ rules();
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
 
-new CharactersAnimation(`.intro__title`, `intro__word`, 800, `cubic-bezier(0.16, 0, 0.26, 0.96)`, 0, 25).prepareText();
-new CharactersAnimation(`.intro__date`, `intro__date-piece`, 600, `cubic-bezier(0.16, 0, 0.26, 0.96)`, 800, 25).prepareText();
+new CharactersAnimation(`.intro__title`, `intro__word`, 800, 400, 25).prepareText();
+new CharactersAnimation(`.intro__date`, `intro__date-piece`, 600, 1200, 25).prepareText();
