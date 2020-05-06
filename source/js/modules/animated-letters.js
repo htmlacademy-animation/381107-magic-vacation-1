@@ -3,50 +3,47 @@ export default class CharactersAnimation {
       elementSelector,
       classNameForWord,
       duration,
-      timingFunction,
       initialDelay,
       delayCoefficient
   ) {
-    this._elementSelector = elementSelector;
-    this._classNameForWord = classNameForWord;
-    this._duration = duration;
-    this._timingFunction = timingFunction;
-    this._element = document.querySelector(this._elementSelector);
-    this._initialDelay = initialDelay;
-    this._delayCoefficient = delayCoefficient;
+    this.elementSelector = elementSelector;
+    this.classNameForWord = classNameForWord;
+    this.duration = duration;
+    this.element = document.querySelector(this.elementSelector);
+    this.initialDelay = initialDelay;
+    this.delayCoefficient = delayCoefficient;
   }
 
-  createElement(letter) {
+  createElement(character) {
     const span = document.createElement(`span`);
-    let delay = this._delayCoefficient * Math.floor(Math.random() * 10);
+    const delay = this.delayCoefficient * Math.floor(Math.random() * 10);
 
-    span.textContent = letter;
-    span.style.animationDuration = `${this._duration}ms`;
-    span.style.animationTimingFunction = `${this._timingFunction}`;
-    span.style.animationDelay = `${this._initialDelay + delay}ms`;
+    span.textContent = character;
+    span.style.animationDuration = `${this.duration}ms`;
+    span.style.animationDelay = `${this.initialDelay + delay}ms`;
     return span;
   }
 
   prepareText() {
-    if (!this._element) {
+    if (!this.element) {
       return;
     }
 
-    const text = this._element.textContent.trim().split(` `).filter((latter) => latter !== ``);
+    const text = this.element.textContent.trim().split(` `).filter((character) => character !== ``);
 
     const content = text.reduce((fragmentParent, word) => {
-      const wordElement = Array.from(word).reduce((fragment, latter) => {
-        fragment.appendChild(this.createElement(latter));
+      const wordElement = Array.from(word).reduce((fragment, character) => {
+        fragment.appendChild(this.createElement(character));
         return fragment;
       }, document.createDocumentFragment());
       const wordContainer = document.createElement(`span`);
-      wordContainer.classList.add(this._classNameForWord);
+      wordContainer.classList.add(this.classNameForWord);
       wordContainer.appendChild(wordElement);
       fragmentParent.appendChild(wordContainer);
       return fragmentParent;
     }, document.createDocumentFragment());
 
-    this._element.innerHTML = ``;
-    this._element.appendChild(content);
+    this.element.innerHTML = ``;
+    this.element.appendChild(content);
   }
 }
