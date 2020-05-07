@@ -35,16 +35,6 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
-  opacity: 0;
-  transform: translateX(-3rem);
-  transition-property: all;
-  transition-duration: 0.7s;
-  transition-timing-function: cubic-bezier(0.28, -0.01, 0, 0.97);
-
-  .body-ready & {
-    opacity: 1;
-    transform: translateX(0);
-  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -140,14 +130,6 @@
 .page-header__nav {
   display: flex;
   align-items: center;
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: 1.2s;
-  transition-timing-function: cubic-bezier(0.28, -0.01, 0, 0.97);
-
-  .body-ready & {
-    opacity: 1;
-  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
@@ -259,9 +241,6 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
-    transition-property: color;
-    transition-duration: 0.35s;
-    transition-timing-function: ease;
 
     &::after {
       content: "";
@@ -270,18 +249,8 @@
       width: 100%;
       height: 2px;
       background-color: $c-light;
-      display: block;
+      display: none;
       left: 0;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition-property: transform;
-      transition-duration: 0.35s;
-      transition-timing-function: ease;
-
-      @media (min-width: $stop-scaling) {
-        left: -5px;
-        right: -5px;
-      }
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -298,30 +267,18 @@
 
     &.active {
       &::after {
-        transform: scaleX(0);
-        transform-origin: right;
-        transition-timing-function: ease;
-        transition-delay: 0.7s;
+        display: block;
       }
     }
 
-    .body-ready &.active {
-      &::after {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-    }
-
-    &:not(.active):hover,
-    &:not(.active):focus {
+    &:hover,
+    &:focus {
       color: $c-purple;
       outline: none;
 
       &::after {
         opacity: 1;
         background-color: $c-purple;
-        transform: scaleX(1);
-        transform-origin: left;
       }
     }
   }
