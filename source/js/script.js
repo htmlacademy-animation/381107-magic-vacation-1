@@ -10,7 +10,7 @@ import social from './modules/social.js';
 import body from './modules/body.js';
 import rules from './modules/rules.js';
 import FullPageScroll from './modules/full-page-scroll';
-import CharactersAnimation from './modules/animated-letters';
+import CharactersAnimation from './modules/characters-animation';
 
 // init modules
 mobileHeight();
@@ -27,5 +27,7 @@ rules();
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
 
-new CharactersAnimation(`.intro__title`, `intro__word`, 800, 400, 25).prepareText();
-new CharactersAnimation(`.intro__date`, `intro__date-piece`, 600, 1200, 25).prepareText();
+new CharactersAnimation(`.intro__title`, `intro__word`, 800, 400, 25).animateLine();
+new CharactersAnimation(`.intro__date`, `intro__date-piece`, 600, 1200, 25).animateLine();
+new CharactersAnimation(`.slider__item-title`, `animated-line`, 800, 0, 15).animateLine();
+new CharactersAnimation(`.prizes__title`, `animated-line`, 800, 300, 15).animateLine();

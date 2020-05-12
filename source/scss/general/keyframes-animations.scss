@@ -37,3 +37,12 @@
     opacity: 1;
   }
 }
+
+@keyframes slideLetterUp {
+  0% {
+    transform: translate3d(0, 15rem, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
