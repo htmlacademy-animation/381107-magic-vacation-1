@@ -99,3 +99,20 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.no-overflow {
+  overflow: hidden;
+}
+
+.animated-line > span {
+  display: inline-block;
+  padding-top: 0.05em;
+  transform: translate3d(0, 15rem, 0);
+  overflow: hidden;
+}
+
+.active .animated-line > span {
+  animation-name: slideLetterUp;
+  animation-timing-function: cubic-bezier(0.16, 0, 0.26, 0.96);
+  animation-fill-mode: forwards;
+}

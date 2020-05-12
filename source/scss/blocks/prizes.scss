@@ -58,6 +58,12 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.2;
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+  animation-delay: 0.9s;
+  animation-fill-mode: forwards;
 
   @media (min-width: $stop-scaling) {
     margin-left: 58px;
@@ -106,6 +112,7 @@
 
 .prizes__item {
   margin-left: 7.5rem;
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     margin-left: 75px;
@@ -127,6 +134,16 @@
   }
 
   &--journeys {
+    transform: translateX(35rem);
+
+    .active & {
+      animation-name: showUp, moveBackToLeft;
+      animation-duration: 0.8s, 0.8s;
+      animation-timing-function: ease-out, cubic-bezier(0, 0, 0, 0.99);
+      animation-delay: 0.7s, 5s;
+      animation-fill-mode: forwards, forwards;
+    }
+
     .prizes__icon {
       position: relative;
       left: -5.9rem;
@@ -265,6 +282,7 @@
     font-weight: 400;
     font-size: 12rem;
     line-height: 0.55;
+    opacity: 0;
 
     @media (min-width: $stop-scaling) {
       font-size: 120px;
@@ -282,6 +300,14 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       font-size: 3.5rem;
     }
+
+    .active .prizes__item--journeys & {
+      animation-name: showUp;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
+      animation-delay: 4s;
+      animation-fill-mode: forwards;
+    }
   }
 
   span {
@@ -289,6 +315,7 @@
     align-items: flex-end;
     margin-left: 1.4rem;
     max-width: 14rem;
+    opacity: 0;
 
     @media (min-width: $stop-scaling) {
       margin-left: 14px;
@@ -303,6 +330,14 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       margin-left: 1rem;
       max-width: 13rem;
+    }
+
+    .active .prizes__item--journeys & {
+      animation-name: fadeInLeft;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
+      animation-delay: 4.2s;
+      animation-fill-mode: forwards;
     }
   }
 
@@ -328,5 +363,16 @@
       width: 0.5rem;
       height: 0.5rem;
     }
+  }
+}
+
+// animations
+
+@keyframes moveBackToLeft {
+  0% {
+    transform: translateX(35rem);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

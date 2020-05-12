@@ -55,15 +55,14 @@
   color: $c-dark;
   background-color: $c-light;
   opacity: 0;
-  transform: translateY(40px);
-  transition-property: all;
-  transition-duration: 0.7s;
-  transition-timing-function: cubic-bezier(0.28, -0.01, 0, 0.97);
   z-index: 1;
 
-  .body-ready & {
-    opacity: 1;
-    transform: translateY(0);
+  .body-ready &,
+  .active & {
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.28, -0.01, 0, 0.97);
+    animation-fill-mode: forwards;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {

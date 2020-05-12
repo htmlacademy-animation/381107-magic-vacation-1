@@ -14,7 +14,7 @@ export default class CharactersAnimation {
     this.delayCoefficient = delayCoefficient;
   }
 
-  createElement(character) {
+  animateSingleCharacter(character) {
     const span = document.createElement(`span`);
     const delay = this.delayCoefficient * Math.floor(Math.random() * 10);
 
@@ -24,7 +24,7 @@ export default class CharactersAnimation {
     return span;
   }
 
-  prepareText() {
+  animateLine() {
     if (!this.element) {
       return;
     }
@@ -33,7 +33,7 @@ export default class CharactersAnimation {
 
     const content = text.reduce((fragmentParent, word) => {
       const wordElement = Array.from(word).reduce((fragment, character) => {
-        fragment.appendChild(this.createElement(character));
+        fragment.appendChild(this.animateSingleCharacter(character));
         return fragment;
       }, document.createDocumentFragment());
       const wordContainer = document.createElement(`span`);
@@ -44,6 +44,7 @@ export default class CharactersAnimation {
     }, document.createDocumentFragment());
 
     this.element.innerHTML = ``;
+    this.element.classList.add(`no-overflow`);
     this.element.appendChild(content);
   }
 }
