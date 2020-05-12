@@ -3,13 +3,13 @@
     <g id="scene-1">
         <g id="sky">
             <animate attributeName="opacity"
-                     from="1"
-                     to="0"
-                     keyTimes="0; 1"
-                     calcMode="linear"
-                     dur="0.8s"
-                     begin="4.2s"
-                     fill="freeze"/>
+                      from="1"
+                      to="0"
+                      keyTimes="0; 1"
+                      calcMode="linear"
+                      dur="0.8s"
+                      begin="4.2s"
+                      fill="freeze"/>
             <g id="zeppelin">
                 <g id="cab">
                     <animateTransform attributeName="transform"
@@ -47,14 +47,14 @@
                                           fill="freeze"
                                           id="rightWindowScales"/>
                         <animate attributeName="opacity"
-                                 attributeType="CSS"
-                                 from="1"
-                                 to="0"
-                                 keyTimes="0; 1"
-                                 calcMode="linear"
-                                 dur="0.1s"
-                                 begin="rightWindowScales.end"
-                                 fill="freeze"/>
+                                  attributeType="CSS"
+                                  from="1"
+                                  to="0"
+                                  keyTimes="0; 1"
+                                  calcMode="linear"
+                                  dur="0.1s"
+                                  begin="rightWindowScales.end"
+                                  fill="freeze"/>
                     </path>
                     <path d="M185.64,231.88h-2.05a3.45,3.45,0,0,0-3.43,3.45v2.92a3.45,3.45,0,0,0,3.43,3.45h2.05a3.45,3.45,0,0,0,3.43-3.45v-2.92A3.45,3.45,0,0,0,185.64,231.88Z" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                 </g>
@@ -121,11 +121,11 @@
             <g id="clouds">
                 <g id="clouds__cloud-1">
                     <animate attributeType="CSS"
-                             attributeName="opacity"
-                             values="0; 0; 1; 1; 0; 0"
-                             keyTimes="0; 0.05; 0.1; 0.65; 0.7; 1"
-                             dur="5s"
-                             repeatCount="indefinite"/>
+                              attributeName="opacity"
+                              values="0; 0; 1; 1; 0; 0"
+                              keyTimes="0; 0.05; 0.1; 0.65; 0.7; 1"
+                              dur="5s"
+                              repeatCount="indefinite"/>
                     <animateMotion from="220, 0" to="-120, 0" dur="5s" repeatCount="indefinite"/>
                     <line x1="28.18" y1="38.34" x2="91.09" y2="38.34" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
                         <animateMotion from="-20, 0" to="10, 0" dur="5s" repeatCount="indefinite"/>
@@ -134,12 +134,12 @@
                 </g>
                 <g id="clouds__cloud-2" opacity="0">
                     <animate attributeType="CSS"
-                             attributeName="opacity"
-                             values="0; 0; 1; 1; 0; 0"
-                             keyTimes="0; 0.05; 0.1; 0.65; 0.7; 1"
-                             dur="5s"
-                             begin="2.5s"
-                             repeatCount="indefinite"/>
+                              attributeName="opacity"
+                              values="0; 0; 1; 1; 0; 0"
+                              keyTimes="0; 0.05; 0.1; 0.65; 0.7; 1"
+                              dur="5s"
+                              begin="2.5s"
+                              repeatCount="indefinite"/>
                     <animateMotion from="50, 0" to="-290, 0" dur="5s" begin="2.5s" repeatCount="indefinite"/>
                     <line x1="218.19" y1="23.72" x2="257.97" y2="23.72" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
                         <animateMotion from="0, 0" to="25, 0" dur="5s" begin="2.5s" repeatCount="indefinite"/>
@@ -161,30 +161,30 @@
             </g>
             <use xlink:href="#cab__window-right" opacity="0">
                 <set attributeName="opacity"
-                     attributeType="CSS"
-                     to="1"
-                     begin="4s"/>
+                      attributeType="CSS"
+                      to="1"
+                      begin="4s"/>
             </use>
         </g>
         <g id="mount">
             <animate attributeName="opacity"
-                     from="1"
-                     to="0"
-                     keyTimes="0; 1"
-                     calcMode="linear"
-                     dur="0.2s"
-                     begin="mountFolds.end"
-                     fill="freeze"/>
+                      from="1"
+                      to="0"
+                      keyTimes="0; 1"
+                      calcMode="linear"
+                      dur="0.2s"
+                      begin="mountFolds.end"
+                      fill="freeze"/>
             <path d="M289.94,327.88H244.88L212.8,296.58a1.89,1.89,0,0,0-2.44,0l-10.2,10.23a1.72,1.72,0,0,1-2.25,0l-19-20.17a2.4,2.4,0,0,0-3.1,0l-26.42,25.64a1.71,1.71,0,0,1-2.25,0l-2.63-2.92a1.71,1.71,0,0,0-2.31,0L124.63,329H80.78" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
                 <animate attributeName="d"
-                         attributeType="XML"
-                         from="M289.94,327.88 H244.88 L212.8,296.58 a1.89,1.89,0,0,0-2.44,0 l-10.2,10.23 a1.72,1.72,0,0,1-2.25,0 l-19-20.17 a2.4,2.4,0,0,0-3.1,0 l-26.42,25.64 a1.71,1.71,0,0,1-2.25,0 l-2.63-2.92 a1.71,1.71,0,0,0-2.31,0 L124.63,329 H80.78"
-                         to="M289.94,328 H200.15 c-0.86,0-1.56,0-2.25,0 h-19 c-1.5,0-2.23,0-3.1,0 h-32.3 c-1.09,0-1.66,0-2.31,0 H80.78"
-                         calcMode="linear"
-                         dur="1s"
-                         begin="4s"
-                         fill="freeze"
-                         id="mountFolds"/>
+                          attributeType="XML"
+                          from="M289.94,327.88 H244.88 L212.8,296.58 a1.89,1.89,0,0,0-2.44,0 l-10.2,10.23 a1.72,1.72,0,0,1-2.25,0 l-19-20.17 a2.4,2.4,0,0,0-3.1,0 l-26.42,25.64 a1.71,1.71,0,0,1-2.25,0 l-2.63-2.92 a1.71,1.71,0,0,0-2.31,0 L124.63,329 H80.78"
+                          to="M289.94,328 H200.15 c-0.86,0-1.56,0-2.25,0 h-19 c-1.5,0-2.23,0-3.1,0 h-32.3 c-1.09,0-1.66,0-2.31,0 H80.78"
+                          calcMode="linear"
+                          dur="1s"
+                          begin="4s"
+                          fill="freeze"
+                          id="mountFolds"/>
             </path>
             <!-- <path d="M289.94,328H200.15c-0.86,0-1.56,0-2.25,0h-19c-1.5,0-2.23,0-3.1,0h-32.3c-1.09,0-1.66,0-2.31,0H80.78" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/> -->
         </g>
@@ -193,14 +193,14 @@
     <g id="scene-2" transform="translate(12 35)">
         <g id="interior" opacity="0">
             <animate attributeName="opacity"
-                     from="0"
-                     to="1"
-                     keyTimes="0; 1"
-                     calcMode="linear"
-                     dur="0.4s"
-                     begin="windowFrameShowsUp.begin + 0.1s"
-                     additive="sum"
-                     fill="freeze"/>
+                      from="0"
+                      to="1"
+                      keyTimes="0; 1"
+                      calcMode="linear"
+                      dur="0.4s"
+                      begin="windowFrameShowsUp.begin + 0.1s"
+                      additive="sum"
+                      fill="freeze"/>
             <g id="ski" transform="translate(-200 0)">
                 <animateTransform attributeName="transform"
                                   type="translate"
@@ -303,13 +303,13 @@
                                       begin="windowFrameShowsUp.begin + 1.4s"
                                       fill="freeze"/>
                     <animate attributeName="opacity"
-                             from="1"
-                             to="0"
-                             keyTimes="0; 1"
-                             calcMode="linear"
-                             dur="0.3s"
-                             begin="windowFrameShowsUp.begin + 2.7s"
-                             fill="freeze"/>
+                              from="1"
+                              to="0"
+                              keyTimes="0; 1"
+                              calcMode="linear"
+                              dur="0.3s"
+                              begin="windowFrameShowsUp.begin + 2.7s"
+                              fill="freeze"/>
                     <line x1="218.19" y1="23.72" x2="257.97" y2="23.72" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
                     <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
                     <line x1="246.24" y1="13.45" x2="268.43" y2="13.45" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -318,14 +318,14 @@
         </g>
         <path id="window-frame" d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z" transform="translate(-54.48 -104.9)" fill="none" stroke="#fff" stroke-width="2" opacity="0">
             <animate attributeName="opacity"
-                     from="0"
-                     to="1"
-                     keyTimes="0; 1"
-                     calcMode="linear"
-                     dur="0.1s"
-                     begin="4.2s"
-                     fill="freeze"
-                     id="windowFrameShowsUp"/>
+                      from="0"
+                      to="1"
+                      keyTimes="0; 1"
+                      calcMode="linear"
+                      dur="0.1s"
+                      begin="4.2s"
+                      fill="freeze"
+                      id="windowFrameShowsUp"/>
             <animateTransform attributeName="transform"
                               type="translate"
                               from="150 160"

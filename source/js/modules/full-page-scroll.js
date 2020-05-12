@@ -15,7 +15,7 @@ export default class FullPageScroll {
   init() {
     document.addEventListener(`wheel`, throttle(this.onScrollHandler, this.THROTTLE_TIMEOUT, {trailing: true}));
     window.addEventListener(`popstate`, this.onUrlHashChengedHandler);
-    document.querySelector("#menu-item-prizes").addEventListener("click", () => {
+    document.querySelector(`#menu-item-prizes`).addEventListener(`click`, () => {
       if (this.screenElements[this.activeScreen].classList.contains(`screen--story`)) {
         document.querySelector(`.screen--story`).classList.add(`screen--delayed`);
         document.querySelector(`.screen--prizes`).classList.add(`from-top`);
