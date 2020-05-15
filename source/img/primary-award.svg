@@ -284,11 +284,11 @@
                     <animateTransform attributeName="transform"
                                       type="translate"
                                       from="250 0"
-                                      to="50 0"
+                                      to="-50 0"
                                       keyTimes="0; 1"
                                       dur="2s"
                                       begin="windowFrameShowsUp.begin + 0.1s"
-                                      fill="freeze"
+                                      repeatCount="indefinite"
                                       id="cloud1SailsPast"/>
                     <line x1="28.18" y1="38.34" x2="91.09" y2="38.34" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
                     <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -297,19 +297,20 @@
                     <animateTransform attributeName="transform"
                                       type="translate"
                                       from="100 0"
-                                      to="-100 0"
+                                      to="-200 0"
                                       keyTimes="0; 1"
                                       dur="2s"
-                                      begin="windowFrameShowsUp.begin + 1.4s"
-                                      fill="freeze"/>
+                                      begin="windowFrameShowsUp.begin + 1s"
+                                      repeatCount="indefinite"/>
                     <animate attributeName="opacity"
                               from="1"
                               to="0"
-                              keyTimes="0; 1"
+                              values="1; 1; 0; 0"
+                              keyTimes="0; 0.5; 0.6; 1"
                               calcMode="linear"
-                              dur="0.3s"
-                              begin="windowFrameShowsUp.begin + 2.7s"
-                              fill="freeze"/>
+                              dur="2s"
+                              begin="windowFrameShowsUp.begin + 1s"
+                              repeatCount="indefinite"/>
                     <line x1="218.19" y1="23.72" x2="257.97" y2="23.72" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
                     <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
                     <line x1="246.24" y1="13.45" x2="268.43" y2="13.45" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
