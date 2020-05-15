@@ -146,8 +146,8 @@
 
     .prizes__icon {
       position: relative;
-      left: -5.9rem;
-      bottom: -1.4rem;
+      //left: -5.9rem;
+      //bottom: -1.4rem;
       width: 26.8rem;
 
       @media (min-width: $stop-scaling) {
@@ -176,6 +176,14 @@
   &--cases {
     margin-left: 7rem;
 
+    .active & {
+      animation-name: showUp;
+      animation-duration: 0.8s;
+      animation-timing-function: ease-out;
+      animation-delay: 5.5s;
+      animation-fill-mode: forwards;
+    }
+
     @media (min-width: $stop-scaling) {
       margin-left: 70px;
     }
@@ -186,7 +194,10 @@
     }
 
     .prizes__icon {
-      width: 18.8rem;
+      position: relative;
+      left: -8rem;
+      width: 35rem;
+      //width: 18.8rem;
 
       @media (min-width: $stop-scaling) {
         width: 188px;
@@ -239,7 +250,8 @@
     margin-right: 3.8rem;
   }
 
-  img {
+  img,
+  object {
     display: block;
     width: 100%;
     height: auto;
@@ -248,6 +260,7 @@
 
 .prizes__desc {
   display: flex;
+  justify-content: center;
   align-items: flex-end;
   margin: 5.6rem 0 0 0;
   font-size: 1.8rem;
@@ -308,6 +321,14 @@
       animation-delay: 4s;
       animation-fill-mode: forwards;
     }
+
+    .active .prizes__item--cases & {
+      animation-name: showUp;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
+      animation-delay: 8.2s;
+      animation-fill-mode: forwards;
+    }
   }
 
   span {
@@ -337,6 +358,14 @@
       animation-duration: 0.4s;
       animation-timing-function: ease-out;
       animation-delay: 4.2s;
+      animation-fill-mode: forwards;
+    }
+
+    .active .prizes__item--cases & {
+      animation-name: fadeInLeft;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
+      animation-delay: 8.4s;
       animation-fill-mode: forwards;
     }
   }
