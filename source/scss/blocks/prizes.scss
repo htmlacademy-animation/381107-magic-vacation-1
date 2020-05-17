@@ -219,6 +219,14 @@
   }
 
   &--codes {
+    .active & {
+      animation-name: fadeInLeft;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
+      animation-delay: 8.7s;
+      animation-fill-mode: forwards;
+    }
+
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
     }
@@ -329,6 +337,14 @@
       animation-delay: 8.2s;
       animation-fill-mode: forwards;
     }
+
+    .active .prizes__item--codes & {
+      animation-name: showUp;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
+      animation-delay: 9.8s;
+      animation-fill-mode: forwards;
+    }
   }
 
   span {
@@ -366,6 +382,14 @@
       animation-duration: 0.4s;
       animation-timing-function: ease-out;
       animation-delay: 8.4s;
+      animation-fill-mode: forwards;
+    }
+
+    .active .prizes__item--codes & {
+      animation-name: fadeInLeft;
+      animation-duration: 0.4s;
+      animation-timing-function: ease-out;
+      animation-delay: 10s;
       animation-fill-mode: forwards;
     }
   }
