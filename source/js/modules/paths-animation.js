@@ -9,7 +9,7 @@ export default () => {
       {strokeDasharray: pathLength / 3 + ` 0`}
     ], {
       duration: 800,
-      delay: delay,
+      delay,
       fill: `forwards`
     });
   };
