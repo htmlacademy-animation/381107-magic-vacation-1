@@ -9,6 +9,7 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import body from './modules/body.js';
 import rules from './modules/rules.js';
+import pathsAnimation from './modules/paths-animation';
 import FullPageScroll from './modules/full-page-scroll';
 import CharactersAnimation from './modules/characters-animation';
 
@@ -23,6 +24,7 @@ form();
 social();
 body();
 rules();
+pathsAnimation();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();

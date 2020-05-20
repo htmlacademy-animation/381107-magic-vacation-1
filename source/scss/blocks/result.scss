@@ -72,7 +72,30 @@
     height: 100%;
     stroke-width: 0.2rem;
     stroke-linejoin: round;
+    overflow: visible;
   }
+}
+
+.result__heading--win {
+  opacity: 0;
+}
+
+.game__result-heading--loss path {
+  transform: translateY(-10rem);
+}
+
+.result__heading--win.result__heading--visible {
+  animation-name: picShowsUp;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.result__heading--loss.result__heading--visible path {
+  animation-name: pathDrops;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 }
 
 .result__text {
@@ -266,5 +289,29 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       width: 45rem;
     }
+  }
+}
+
+// animations
+
+@keyframes picShowsUp {
+  to {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes pathDrops {
+  0% {
+    transform: translateY(-10rem);
+  }
+  80% {
+    transform: translateY(1rem);
+  }
+  90% {
+    transform: translateY(-0.6rem);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
